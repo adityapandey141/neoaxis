@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #2D5DA1;
+  --navy-dark: #1B3A64;
+  --blue-light: #4A90D9;
+  --orange: #E8932C;
+  --orange-dark: #D04A2D;
+  --gray-dark: #4A4A4A;
+  --gray-medium: #6B7280;
+  --gray-light: #F5F5F5;
+  --ivory: #FAF8F5;
+  --white: #FFFFFF;
+  --foreground: #1B1B1B;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-navy-dark: var(--navy-dark);
+  --color-blue-light: var(--blue-light);
+  --color-orange: var(--orange);
+  --color-orange-dark: var(--orange-dark);
+  --color-gray-dark: var(--gray-dark);
+  --color-gray-medium: var(--gray-medium);
+  --color-gray-light: var(--gray-light);
+  --color-ivory: var(--ivory);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
